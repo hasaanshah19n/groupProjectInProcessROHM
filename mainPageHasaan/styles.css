@@ -1,0 +1,417 @@
+/*Master Styles*/
+body{
+  margin: 0px;
+}
+
+.loading{
+  -webkit-transform: translate3d(0,0,0);
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/loading.gif"); /*From loading.io*/
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #fff;
+  position: fixed;
+  z-index: 9999999;
+}
+
+.container1{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/*Nav Styles*/
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.left-side{
+  display: flex;
+}
+
+.navbar .left-side div{
+margin-right: 20px;
+text-transform: uppercase;
+}
+
+.nav-link{
+  height: 22px;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 1.5s;
+}
+
+.nav-link:hover{
+  border-bottom: 1px solid black;
+}
+
+.nav-link a{
+  color: #8a8a8a;
+  text-decoration: none;
+  transition: color 1s;
+}
+
+.nav-link a:hover{
+  color: black;
+}
+
+/*Container1 styles*/
+.portfolio-img-web-development{
+  background-image: url("images/webDevelopment.jpg");
+  height: 300px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: brightness(100%);
+  transition-property: filter;
+  transition-timing-function: ease;
+  transition: 1s;
+}
+
+.secondContainer-item:hover .portfolio-img-web-development{
+  filter: brightness(30%);
+}
+
+.portfolio-img-web-development2{
+  background-image: url("images/personalPortfolio.jpg");
+  height: 300px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: brightness(100%);
+  transition-property: brightness;
+  transition-timing-function: ease;
+  transition: 1s;
+}
+.secondContainer-item:hover .portfolio-img-web-development2{
+  filter: brightness(20%);
+}
+
+.portfolio-img-web-development3{
+  background-image: url("images/app.jpg");
+  height: 300px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: brightness(100%);
+  transition-property: brightness;
+  transition-timing-function: ease;
+  transition: 1s;
+}
+.secondContainer-item:hover .portfolio-img-web-development3{
+  filter: brightness(20%);
+}
+
+.portfolio-img-web-development4{
+  background-image: url("images/violin.jpg");
+  height: 300px;
+  width: 100%;
+  background-size: cover;
+  position: center;
+  background-repeat: no-repeat;
+  filter: brightness(100%);
+  transition-property: brightness;
+  transition-timing-function: ease;
+  transition: 1s;
+}
+.secondContainer-item:hover .portfolio-img-web-development4{
+  filter: brightness(30%);
+}
+
+.portfolio-img-web-development5{
+  background-image: url("images/software.jpg");
+  height: 300px;
+  width: 100%;
+  background-size: cover;
+  position: center;
+  background-repeat: no-repeat;
+  filter: brightness(100%);
+  transition-property: brightness;
+  transition-timing-function: ease;
+  transition: 1s;
+}
+.secondContainer-item:hover .portfolio-img-web-development5{
+  filter: brightness(30%);
+}
+
+.portfolio-img-web-development6{
+  background-image: url("images/programming.jpg");
+  height: 300px;
+  width: 100%;
+  background-size: cover;
+  position: center;
+  background-repeat: no-repeat;
+  filter: brightness(100%);
+  transition-property: brightness;
+  transition-timing-function: ease;
+  transition: 1s;
+}
+.secondContainer-item:hover .portfolio-img-web-development6{
+  filter: brightness(30%);
+}
+
+.portfolio-img-web-development7{
+  background-image: url("images/machineLearning.jpg");
+  height: 300px;
+  width: 100%;
+  background-size: cover;
+  position: center;
+  background-repeat: no-repeat;
+  filter: brightness(100%);
+  transition-property: brightness;
+  transition-timing-function: ease;
+  transition: 1s;
+}
+.secondContainer-item:hover .portfolio-img-web-development7{
+  filter: brightness(30%);
+}
+
+.portfolio-img-web-development8{
+  background-image: url("images/electronics.jpg");
+  height: 300px;
+  width: 100%;
+  background-size: cover;
+  position: center;
+  background-repeat: no-repeat;
+  filter: brightness(100%);
+  transition-property: brightness;
+  transition-timing-function: ease;
+  transition: 1s;
+}
+.secondContainer-item:hover .portfolio-img-web-development8{
+  filter: brightness(20%);
+}
+
+.portfolio-img-web-development9{
+  background-image: url("images/mechEng.jpg");
+  height: 300px;
+  width: 100%;
+  background-size: cover;
+  position: center;
+  background-repeat: no-repeat;
+  filter: brightness(100%);
+  transition-property: brightness;
+  transition-timing-function: ease;
+  transition: 1s;
+}
+.secondContainer-item:hover .portfolio-img-web-development9{
+  filter: brightness(30%);
+}
+
+.secondContainer-allItems{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.secondContainer-item{
+  position: relative;
+}
+
+.img-webDevelopment-text{
+  position: absolute;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+img{
+  width: 100px;
+  margin-bottom: 20px;
+  opacity: 0;
+  transition-property: opacity;
+  transition-timing-function: ease;
+  transition: 1s;
+}
+
+.secondContainer-item:hover img{
+  opacity: 1;
+}
+
+.subtitle-img{
+  font-weight: 600;
+  font-family: 'EB Garamond', serif;
+  color: transparent;
+  transition-property: color;
+  transition-timing-function: ease;
+  transition: 1s;
+}
+
+.secondContainer-item:hover .subtitle-img{
+  color: #519872;
+}
+
+.secondContainer-item a{
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+/* ********************************************MedIA Query***********************************/
+
+@media (max-width:1122px) {
+  .secondContainer-allItems{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  img{
+    opacity: 1;
+  }
+
+  .portfolio-img-web-development10{
+    background-image: url("images/inProgress.jpg");
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    position: center;
+    background-repeat: no-repeat;
+    filter: brightness(20%);
+  }
+
+  .subtitle-img{
+    color: #519872;
+  }
+
+  .portfolio-img-web-development{
+    background-image: url("images/webDevelopment.jpg");
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    position: center;
+    background-repeat: no-repeat;
+    filter: brightness(20%);
+  }
+
+  .subtitle-img{
+    color: #519872;
+  }
+
+  .portfolio-img-web-development2{
+    background-image: url("images/personalPortfolio.jpg");
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    position: center;
+    background-repeat: no-repeat;
+    filter: brightness(20%);
+  }
+  .subtitle-img{
+    color: #519872;
+  }
+
+  .portfolio-img-web-development3{
+    background-image: url("images/app.jpg");
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    position: center;
+    background-repeat: no-repeat;
+    filter: brightness(20%);
+  }
+  .subtitle-img{
+    color: #519872;
+  }
+
+  .portfolio-img-web-development4{
+    background-image: url("images/violin.jpg");
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    position: center;
+    background-repeat: no-repeat;
+    filter: brightness(20%);
+  }
+  .subtitle-img{
+    color: #519872;
+  }
+
+  .portfolio-img-web-development5{
+    background-image: url("images/software.jpg");
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    position: center;
+    background-repeat: no-repeat;
+    filter: brightness(20%);
+  }
+  .subtitle-img{
+    color: #519872;
+  }
+
+  .portfolio-img-web-development6{
+    background-image: url("images/programming.jpg");
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    position: center;
+    background-repeat: no-repeat;
+    filter: brightness(20%);
+  }
+  .subtitle-img{
+    color: #519872;
+  }
+
+  .portfolio-img-web-development7{
+    background-image: url("images/machineLearning.jpg");
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    position: center;
+    background-repeat: no-repeat;
+    filter: brightness(20%);
+  }
+  .subtitle-img{
+    color: #519872;
+  }
+
+  .portfolio-img-web-development8{
+    background-image: url("images/electronics.jpg");
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    position: center;
+    background-repeat: no-repeat;
+    filter: brightness(20%);
+  }
+  .subtitle-img{
+    color: #519872;
+  }
+
+  .portfolio-img-web-development9{
+    background-image: url("images/mechEng.jpg");
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    position: center;
+    background-repeat: no-repeat;
+    filter: brightness(20%);
+  }
+  .subtitle-img{
+    color: #519872;
+  }
+
+
+
+
+}
+
+@media (max-width:550px) {
+  .secondContainer-allItems{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .logo-img-9{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+}

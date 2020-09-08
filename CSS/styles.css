@@ -1,0 +1,546 @@
+.loading{
+  -webkit-transform: translate3d(0,0,0);
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/loading.gif"); /*From loading.io*/
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #fff;
+  position: fixed;
+  z-index: 9999999;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body { /*Here we have removed all preset CSS in order to make the body flush with the page.*/
+  margin:0px;
+  padding: 0px;
+  background-color: white;
+}
+
+*{ /* This star tag selects all elements inside the html. */
+  box-sizing:border-box;
+  /* border-box tells the browser to account for any border and padding in the values you specify for an element's width and height. If you set an element's width to 100 pixels, that 100 pixels will include any border or padding you added, and the content box will shrink to absorb that extra width. */
+}
+
+
+/********************Navigation Bar**************/
+
+.mainLogo img {
+  width: 50px;
+}
+
+
+.collapse ul li{
+  margin-left: 50px;
+  border-bottom: 1px solid transparent;
+}
+
+.collapse ul li a:hover{
+  color: black;
+  font-weight: bold;
+}
+
+
+.row{
+  margin:50px;
+}
+
+/* *********************Swiper CSS************ */
+body {
+   background: #fff;
+   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+   font-size: 14px;
+   color: #000;
+   margin: 0;
+   padding: 0;
+ }
+
+ .firstDivision{
+   position: relative;
+ }
+
+ .swiper-container {
+   padding-top: 50px;
+   padding-bottom: 50px;
+   position: absolute;
+   left: 0px;
+   top: 0px;
+   width: 800px;
+ }
+
+ .swiper-container2 {
+   padding-top: 50px;
+   padding-bottom: 50px;
+   position: absolute;
+   left: 150px;
+   top: 0px;
+   width: 300px;
+ }
+
+ .swiper-slide {
+   background-position: center;
+   background-size: cover;
+   width: 286px;
+   height: 100%;
+
+ }
+
+ .card-body .image1{
+   width: 70px;
+   border-radius: 100%;
+   border-style: solid;
+   position: absolute;
+   left: 25px;
+   bottom: 25px;
+ }
+
+ .card-body1 p{
+   width: 150px;
+ }
+
+ .card-body .image2{
+ }
+
+ .card-body2 p{
+   width: 115px;
+ }
+
+ .card-body .image3{
+   width: 70px;
+   border-radius: 100%;
+   border-style: solid;
+   position: absolute;
+   bottom: 25px;
+   left: 25px;
+
+ }
+
+ .card-body3 p{
+   width: 120px;
+   position: absolute;
+   right: 40px;
+ }
+
+ .card-body .image4{
+   width: 70px;
+   border-radius: 100%;
+   border-style: solid;
+   position: absolute;
+   bottom: 25px;
+   left: 25px;
+ }
+
+ .card-body4 p{
+   width: 90px;
+   position: absolute;
+   right: 20px;
+ }
+
+ #part1 .card{
+   height: 350px;
+   margin-top: 20px;
+ }
+
+ .card-body1{
+   background-image: url('../images/plant.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+ }
+
+ .card-body2{
+   background-image: url('../images/flower.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: right;
+ }
+
+ .card-body3{
+   background-image: url('../images/flower2.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: right;
+ }
+
+ .card-body4{
+   background-image: url('../images/flower3.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: bottom;
+ }
+
+ .prev{
+   position: absolute;
+   top: 101px;
+   left: 5px;
+   color: #8fc0a9;
+ }
+
+
+ .after{
+   position: absolute;
+   top: 101px;
+   left: 260px;
+   color: #8fc0a9;
+ }
+
+ .prev2{
+   position: absolute;
+   top: 50px;
+   left: 0px;
+   height: 400px;
+   width: 240px;
+   color: rgba(255, 0, 0, 0);
+ }
+
+ .after2{
+   position: absolute;
+   top: 50px;
+   left: 570px;
+   height: 400px;
+   width: 400px;
+   color: rgba(255, 0, 0, 0);
+ }
+
+ .prev:focus{
+   outline: none;
+ }
+
+ .after:focus{
+   outline: none;
+ }
+
+ .prev2:focus{
+   outline: none;
+ }
+
+ .after2:focus{
+   outline: none;
+ }
+
+ .card-body a{
+   color: #519872;
+ }
+
+ .card-body a:hover{
+  color: #184d47;
+ }
+
+ .secondDivison img{
+   border-style: outset;
+   border-radius: 100%;
+   border-width: 5px;
+
+ }
+
+/*****************************firstDivison**************************/
+
+.firstDivision {
+  height: 800px;
+  /* Viewport Height (vh). This unit is based on the height of the viewport. A value of 1vh is equal to 1% of the viewport height. Viewport Width (vw). A value of 1vh is equal to 1% of the viewport height. */
+
+  background-image: url("../images/table.jpg");
+  /* The background-image property specifies an image to use as the background of an element. By default, the image is repeated so it covers the entire element. */
+
+  background-position: bottom;
+  /* The background-position property sets the starting position of a background image. Tip: By default, a background-image is placed at the top-left corner of an element, and repeated both vertically and horizontally. */
+
+  background-repeat: no-repeat;
+  /* By default, the background-image property repeats an image both horizontally and vertically. This will prevent the image from being repeated. */
+
+  background-size: cover;
+  /* The background-size property specifies the size of the background images. cover	Resize the background image to cover the entire container, even if it has to stretch the image or cut a little bit off one of the edges. */
+
+  /* ***************************************************All Info on background-image can be found here: https://www.w3schools.com/css/css_background.asp************************************************** */
+}
+
+/*****************************secondDivison Cards**************************/
+.secondDivison .card{
+box-shadow: 0 1px 15px rgba(27,31,35,.15);
+transition-property: background;
+transition-duration: 2s;
+}
+
+.secondDivison .card:hover{
+box-shadow: 0 1px 15px rgba(27,31,35,.15);
+background-color: #e4e3e3;
+}
+
+
+.secondDivison{
+  text-align: center;
+}
+
+
+h2{
+  text-align: center;
+}
+
+#part2 .card{
+  position: relative;
+}
+
+#part2 img{
+  width: 150px;
+  position: absolute;
+  bottom: 15px;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+/*****************************Form**************************/
+.btn {
+  font-size: 16px;
+  border-radius: 30px;
+  padding: 10px 30px;
+  margin-right: 10px;
+  margin-bottom: 10px;}
+  .btn:hover, .btn:active, .btn:focus {
+    outline: none;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important; }
+  .btn.btn-primary {
+    background: #fab95b;
+    border-color: #fab95b;
+    color: #fff; }
+    .btn.btn-primary:hover {
+      background: #000;
+      border-color: #000;
+      color: #fff; }
+    .btn.btn-primary.btn-black--hover:hover {
+      background: #666666;
+      color: #fff; }
+
+.line-height-1 {
+  line-height: 1 !important; }
+
+.form-control {
+  height: 43px;
+  border-radius: 30px;
+  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background: transparent !important;
+  color: #fff !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  border-bottom-width: 2px !important; }
+  .form-control:active, .form-control:focus {
+    border-color: #fff !important; }
+  .form-control:hover, .form-control:active, .form-control:focus {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important; }
+  .form-control::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: rgba(255, 255, 255, 0.9); }
+  .form-control::-moz-placeholder {
+    /* Firefox 19+ */
+    color: rgba(255, 255, 255, 0.9); }
+  .form-control:-ms-input-placeholder {
+    /* IE 10+ */
+    color: rgba(255, 255, 255, 0.9); }
+  .form-control:-moz-placeholder {
+    /* Firefox 18- */
+    color: rgba(255, 255, 255, 0.9); }
+
+  #contact-section{
+    background-color: #8fc0a9;
+  }
+
+.form .form-control {
+  border: none;
+  border-radius: 0px;
+  border-bottom: 1px solid #eee; }
+  .form .form-control:active, .form .form-control:focus {
+    border-color: #000; }
+
+/*****************************thirdDivision**************************/
+
+.thirdDivision{
+  background-color: #ffffff;
+  text-align: center;
+
+}
+
+.thirdDivision .row {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+i{
+  color: #206a5d;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  transition-property: color;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+}
+
+i:hover{
+  color: #204051;
+}
+
+
+
+
+ /*****************************Font-Style**************************/
+ h2{
+   font-family: 'Roboto', sans-serif;
+ }
+
+ h5,p{
+   font-family: 'Open Sans', sans-serif;
+ }
+
+ .rowAll p{
+   text-align: left;
+   height: 100%
+ }
+
+ .rowAll h5{
+   font-weight: bold;
+ }
+
+ h3{
+   font-family: 'Lobster', cursive;
+    text-align: center;
+    margin-top: 50px;
+ }
+
+
+
+ /********************************Media******************/
+
+ @media (min-width:0px) and  (max-width:1309px) {
+    .swiper-container{
+      display: none;
+    }
+}
+
+@media (min-width:0px) and  (max-width:607px) {
+  .swiper-container2 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    width: 300px;
+  }
+}
+
+@media (min-width:1309px) {
+   .swiper-container2{
+     display: none;
+   }
+
+ }
+
+
+@media (min-width:0px) and (max-width:991px) {
+  .navigationNew ul li{
+    margin-left: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .navigationNew ul li a{
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .navbar-brand img{
+    width: 100px;
+  }
+
+  .navbar button{
+    height: 80px;
+    width: 80px;
+  }
+
+  .firstDivision{
+    height: 500px;
+  }
+
+  #part2 .card2{
+    margin-top: 70px;
+  }
+
+}
+
+@media (max-width:579px) {
+
+  i{
+    margin-bottom: 0px;
+  }
+
+}
+
+@media (min-width:1250px) {
+
+  #part2 .card{
+    height: 500px;
+  }
+}
+
+@media (max-width:1249px) {
+
+  #part2 .card{
+    height: 550px;
+  }
+}
+
+@media (max-width:1146px) {
+
+  #part2 .card{
+    height: 670px;
+  }
+}
+
+@media (max-width:991px) {
+
+  #part2 .card{
+    height: 490px;
+  }
+}
+
+@media (max-width:767px) {
+
+  #part2 .card{
+    height: 440px;
+  }
+
+  #part2 .card3{
+    margin-top: 70px;
+  }
+}
+
+@media (max-width:517px) {
+
+  #part2 .card{
+    height: 520px;
+  }
+}
+
+@media (max-width:395px) {
+
+  #part2 .card{
+    height: 650px;
+  }
+}
+
+.site-section {
+  padding: 2.5em 0; }
+  @media (min-width: 768px) {
+    .site-section {
+      padding: 7em 0; } }
+  .site-section.site-section-sm {
+    padding: 4em 0; }
+
+.site-section-heading {
+  padding-bottom: 20px;
+  margin-bottom: 0px;
+  position: relative;
+  font-size: 2.5rem; }
+  @media (min-width: 768px) {
+    .site-section-heading {
+      font-size: 3rem; } }

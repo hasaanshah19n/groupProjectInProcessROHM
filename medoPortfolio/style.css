@@ -1,0 +1,788 @@
+.loading{
+  -webkit-transform: translate3d(0,0,0);
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/loading.gif"); /*From loading.io*/
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #fff;
+  position: fixed;
+  z-index: 9999999;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    scroll-behavior: smooth;
+
+}
+body{
+    width: 100%;
+    height: 100%;
+    background-color:rgb(110, 110, 110);
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.p{
+    color: antiquewhite;
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+
+}
+.langP{
+    margin: 20px;
+}
+.section-title{
+    font-size: 3rem;
+    font-weight: 300;
+    color: antiquewhite;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+
+}
+.section-title span{
+    color: brown;
+}
+/* table{
+    border: solid  ;
+    border-color: rgba(247, 82, 27, 0.466);
+} */
+.cta{
+    display: inline-block;
+    padding: 20px 30px;
+    color: brown;
+    background-color:transparent;
+    border: 4px solid brown;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 20px;
+    transition: .3s ease ;
+    transition-property: background-color, color;
+}
+.cta:hover{
+    color: antiquewhite;
+    background-color: brown;
+}
+.brand h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+    }
+    .brand h1 span{
+        color: crimson;
+    }
+
+td{
+     border: transparent;
+     border-radius: 10%;
+    border-color: rgba(165, 164, 163, 0.671);
+    padding:50px 20px;
+    text-align: left;
+    }
+.years{
+
+    padding:20px 20px;
+    text-align: left;
+    flex-wrap: nowrap;
+    justify-items: center;
+
+}
+    /* this is the nav bar section  */
+#header {
+    position: fixed;
+    z-index: 95;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: auto;
+}
+#header .header {
+    min-height: 8vh;
+    background-color: #404142d3;
+    transition: .3s ease background-color;
+}
+#header .nav-bar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        max-width: 1300px;
+        padding: 0 10px;
+        z-index: 1;
+}
+#header .nav-list ul {
+    list-style: none;
+    position: absolute;
+    background-color: #373c42f3 ;
+    width: 100vw;
+    height: 100vh;
+    left: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow-x: hidden;
+}
+#header .nav-list ul.active {
+    left: 0;
+}
+#header .nav-list ul a{
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 20px;
+    display: block;
+    /* position: relative; */
+}
+#header .nav-list ul a::after{
+    content: attr(data-after);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: #70151d9a ;
+    font-size: 10rem;
+    letter-spacing: 50px;
+    z-index: -1;
+    transition: .3s ease letter-spacing ;
+}
+#header .nav-list ul li:hover a::after{
+    transform: translate(-50%, -50%) scale(1);
+    letter-spacing: initial;
+}
+#header .nav-list ul li:hover a{
+    color: crimson;
+
+}
+#header .hamburger{
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+    border: 3px solid white;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    z-index: 105;
+    cursor: pointer;
+    transform: scale(.8);
+    margin-right: 20px;
+
+}
+#header .hamburger::after{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid white;
+    animation: hamburger_puls 1s ease infinite;
+}
+#header .hamburger .bar{
+height: 2px;
+width: 30px;
+position: relative;
+background-color: white;
+z-index: -1;
+}
+#header .hamburger .bar::after,#header .hamburger .bar::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background-color: white;
+    transition: .3s ease;
+    transition-property: top, bottom;
+}
+#header .hamburger .bar::after{
+    top: 8px;
+}
+#header .hamburger .bar::before{
+    bottom: 8px;
+}
+#header .hamburger.active .bar::before{
+       bottom: 0;
+}
+#header .hamburger.active .bar::after{
+ top: 0;
+}
+
+    /* end of the nav bar */
+
+/* the header section will start from here  */
+header{
+    width: 100%;
+    height: 740px;
+    background-image: url(img/backG.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative; /*this make the change related to the postion  */
+    text-align: center;
+     z-index: 1;/*this will make the black transparant opacity in after go to inside and outside of the screen  */
+}
+#momo::after{
+    content: '';
+position: absolute;
+left: 0;
+top: 0;
+height: 100%;
+width: 100%;
+background-color: black;
+opacity: 0.6;
+z-index: -1;
+}
+#momo .momo{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: 50px;
+}
+#momo h2{
+    display: block;
+    width: fit-content;
+    font-size: 3rem;
+    position: relative;
+    color: transparent;
+    animation: text_revealing .5s ease forwards;
+    animation-delay: 1s;
+}
+#momo h2:nth-child(1){
+    animation-delay: 1s;
+}
+#momo h2:nth-child(2){
+    animation-delay: 2s;
+
+}
+#momo h2:nth-child(3){
+    animation: name_color 1s ease forwards;
+    animation-delay: 3s;
+}
+
+
+#momo h2 span{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: brown;
+    animation:revealing_box 1s ease ;
+    animation-delay: .5s;
+}
+#momo h2 span:nth-child(1){
+    animation-delay: .5s;
+}
+#momo h2 span:nth-child(2){
+    animation-delay: 1.5s;
+}
+#momo h2 span:nth-child(3){
+    animation-delay: 2.5s;
+}
+
+.profile_picture{
+    box-shadow: black 5px;
+    width: 200px;
+    border-radius: 100%;
+}
+nav{
+    height: 60px;
+    width: 100%;
+    background-color: rgba(43, 42, 42, 0.315);
+}
+.container{
+    min-height: 640px;
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+hr{
+    width: 20%;
+    margin: auto;
+    color: aliceblue;
+    border: none ;
+    border-width: 10px;
+    border-top-color: rgba(233, 150, 122, 0.623);
+    border-top-style: dotted;
+    z-index: 1;
+}
+a{
+    text-decoration: none;
+    color: brown;
+}
+h2{
+    color: brown;
+}
+/* end of the header section  */
+/* the main section will start from here   */
+
+main .services{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+main .lang table{
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5em;
+    font-weight: 300;
+    letter-spacing: .05rem;
+    background-color: black;
+}
+ #mains .services .lang .p ul {
+     text-align: center;
+     justify-content: center;
+
+
+ }
+main .info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+main .item-info{
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-image:linear-gradient(60deg, #29323c 0%, #485563 100%);
+    background-size: cover;
+    margin: 10px 5%;
+    position: relative;
+    z-index: -10;
+    box-shadow: 0 2px 12px rgba(43, 42, 42, 0.315);
+
+}
+main .item-info::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    opacity: 0.2;
+    z-index: -5;
+
+}
+main .item-info .icon{
+    height: 80px;
+    width: 80px;
+    margin-bottom: 20px;
+}
+main .item-info .info img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+table{
+    table-layout: auto;
+    margin: auto;
+}
+main .item-info h2{
+    font-size: 2rem;
+    color: brown;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* the end of the main section  */
+
+
+/* projects section  */
+#projects .projects{
+flex-direction: column;
+max-width: 1200px;
+margin: 0 auto;
+padding: 100px 0;
+}
+#projects .projects-header h1{
+    margin-bottom:50px;
+    }
+#projects .all-projects{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    }
+#projects .project-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: bisque;
+}
+#projects .project-info{
+    padding: 30px;
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(60deg, #29323c 0%,#485563 100%);
+    color: white;
+}
+#projects .project-info h1{
+    font-size: 4rem;
+    font-weight: 500;
+}
+#projects .project-info h2{
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top:10px ;
+}
+#projects .project-info p{
+    color: white;
+}
+#projects .project-img{
+    flex-basis: 50%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+
+}
+#projects .project-img:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #29323c 0%,#485563 100%);
+    opacity: 0.5;
+}
+#projects .project-img img{
+    transition: .3s ease transform;
+}
+#projects .project-item:hover .project-img img{
+    transform:scale(1.1) ;
+}
+
+
+/* end of the projects section */
+/* start of the about section  */
+#about .about{
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+#about .col-left{
+        width: 250px;
+        height: 360px;
+}
+#about .col-right{
+    width: 100%;
+}
+#about .col-right h2{
+font-size: 1.8rem;
+font-weight: 500;
+letter-spacing: 1.2rem;
+margin-bottom: 10px;
+}
+#about .col-right p{
+    margin-bottom: 20px;
+}
+#about .col-right .cta{
+    color: rgb(0, 0, 0);
+    margin-bottom: 50px;
+    padding: 10px 20px;
+    font-size: 2rem;
+
+}
+#about .col-left .about-img {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border: 10px solid rgba(77, 76, 76, 0.966);
+}
+#about .col-left .about-img::after{
+    content: '';
+    position: absolute;
+    left: -33px;
+    top: 19px;
+    height: 98%;
+    width: 98%;
+    border: 7px solid crimson;
+    z-index: -1;
+
+}
+
+/* end of the about secion  */
+/* contact section */
+#contact .contact{
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#contact .contact-items {
+    width: 400px;
+}
+#contact .contact-item{
+    width: 80%;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 18px 0px #0000002c;
+    transition: .3s ease box-shadow;
+}
+#contact .contact-item:hover{
+    box-shadow: 0px 0px 5px 0px #0000002c;
+}
+#contact .icon{
+    width: 70px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+#contact .contact-info h1{
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+#contact .contact-info h2{
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 2rem;
+}
+/* end of the contact section */
+/* start of the footer section  */
+#footer {
+    background-color: #485563;
+}
+#footer .footer{
+    min-height: 200px;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+#footer h2{
+    color: white;
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing: .1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#footer .social-icon{
+    display: flex;
+    margin-bottom: 30px;
+}
+#footer .social-item{
+    height: 50px;
+    width: 50px;
+    margin: 0 5px;
+}
+#footer .social-item img{
+    filter: grayscale(1);
+    transition: .3s ease filter;
+}
+#footer .social-item:hover img{
+    filter: grayscale(0);
+}
+#footer p{
+    color: white;
+    font-size: 1.3rem;
+}
+/* end of footer  */
+
+
+/* keyframes is the animation of the movement of the box on the top of the h2 and it will apply when the page will load  */
+@keyframes hamburger_puls{
+    0%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(1.9);
+    }
+}
+@keyframes revealing_box{
+    50%{width:100% ;
+    left:0 ;}
+    100%{width:0 ;
+    left: 100%;}
+}
+@keyframes text_revealing{/* this will give an animation of color changing when the page will load and transform the color from tranparant to this color and should be applyed in #momo h2 in animation */
+    100%{
+        color: antiquewhite;
+    }
+}
+@keyframes name_color{
+    100%{
+        font-weight: 500;
+        color: brown;
+    }
+}
+/* media for the phone */
+@media only screen and (min-width:400px) {
+#mains .services .lang .p ul {
+    text-align: center;
+    justify-content: center;
+    list-style-type: none;
+}
+}
+/* mediaquerry for tablet  */
+@media only screen and (min-width:768px){
+    /* to increase the size of the botton  */
+    #mains .services .lang .p ul {
+        text-align: center;
+        justify-content: center;
+        list-style-type: none;
+
+
+    }
+    .cta{
+        font-size: 2.5rem;
+        padding: 20px 60px;
+    }
+    h1.section-title{
+        font-size: 5rem;
+    }
+    #momo h2{
+        font-size: 5rem;
+    }
+    /* main section this will work for the main but I want to keep it that way   */
+    #services .service-bottom .service-item{
+        flex-basis: 45%;
+        margin: 1.5%;
+    }
+/* this is the part for the projects  */
+#projects .project-item{
+    flex-direction: row;
+}
+#projects .project-item:nth-child(even){
+    flex-direction: row-reverse;
+}
+#projects  .project-item{
+    height: 400px;
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+}
+#projects .all-projects .project-info{
+    height: 100%;
+}
+#projects .all-projects .project-img{
+height: 100%;
+}
+/* about section  */
+#about .about {
+    flex-direction: row;
+}
+#about .col-left{
+    width: 600px;
+    height: 400px;
+    padding-left: 60px;
+}
+#about .about .col-left .about-img::after{
+    left: -45px;
+    top: 34px;
+    height: 98%;
+    width: 98%;
+    border: 10px solid crimson;
+}
+#about .col-right{
+    text-align: left;
+    padding: 30px;
+}
+#about .col-right h1{
+    text-align: left;
+    }
+    /* contact section  */
+#contact .contact {
+    flex-direction: column;
+    padding: 100px 0;
+    align-items: center;
+    justify-content: center;
+    min-width: 20vh;
+}
+#contact .contact-items{
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0;
+}
+#contact .contact-item{
+    margin: 20px;
+    flex-direction: row;
+}
+#contact .contact-item .icon{
+        height: 100px;
+        width: 100px;
+}
+#contact .contact-item .icon img{
+       object-fit:contain ;
+}
+#contact .contact-item .contact-info{
+    width: 100%;
+    text-align: left;
+    padding-left: 20px;
+}
+
+}
+/* mediaquerry for tablet  */
+/* media querry for desktop / */
+@media only screen and (min-width:1200px){
+
+#header .hamburger{
+    display: none;
+    }
+#header .nav-list ul{
+    position: initial;
+    display: block;
+    height: auto;
+    width: fit-content;
+    background-color: transparent;
+}
+#header .nav-list ul li{
+    display: inline-block;
+}
+#header .nav-list ul li a{
+    font-size: 1.8rem;
+}
+#header .nav-list ul a::after{
+    display: none;
+}
+
+}
